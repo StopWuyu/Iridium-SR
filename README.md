@@ -1,6 +1,6 @@
 # Iridium-NG
 
-A KCP packet sniffer + visualizer in one, backend rewritten in Go.
+A KCP packet sniffer + visualizer in one, backend rewritten in Go. 
 
 ![Build](https://github.com/Akka0/Iridium-NG/actions/workflows/build.yml/badge.svg)
 
