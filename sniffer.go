@@ -197,16 +197,16 @@ func handleSpecialPacket(data []byte, fromServer bool, timestamp time.Time) {
 func handleProtoPacket(data []byte, fromServer bool, timestamp time.Time) {
 	key := binary.BigEndian.Uint32(data[:8])
 	key = key ^ 0x9D74C714 // Magic Start for SR
-	var xorPad []byte
+	//var xorPad []byte
 
 	if sessionKey != nil {
-		xorPad = sessionKey
+		//xorPad = sessionKey
 	} else {
 		if len(initialKey[key]) == 0 {
 			log.Println("Could not found initial key to decrypt", key)
 			closeHandle()
 		}
-		xorPad = initialKey[key]
+		//xorPad = initialKey[key]
 	}
 	//xorDecrypt(data, xorPad)
 
