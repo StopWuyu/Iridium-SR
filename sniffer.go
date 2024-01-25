@@ -208,7 +208,7 @@ func handleProtoPacket(data []byte, fromServer bool, timestamp time.Time) {
 		}
 		xorPad = initialKey[key]
 	}
-	xorDecrypt(data, xorPad)
+	//xorDecrypt(data, xorPad)
 
 	packetId := binary.BigEndian.Uint16(data[4:6])
 	var objectJson interface{}
